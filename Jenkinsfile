@@ -25,7 +25,7 @@ pipeline{
 		stage('Publish'){
 			steps{
 				withAWS(region: 'us-east-2', credentials: 'aws-creds'){
-					s3Upload(bucket: 'ss-scrumptious-artifacts', file: 'target/ss-scrumptious-eureka-0.0.1-SNAPSHOT.jar', path: 'restaurant-eureka.jar')
+					s3Upload(bucket: 'ss-scrumptious-artifacts', file: 'target/eureka_service-0.0.1-SNAPSHOT.jar', path: 'restaurant-eureka.jar')
 				}
 			}
 		}
